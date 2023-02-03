@@ -1,0 +1,42 @@
+
+<html>
+    <head>
+        <title>Parikshit's Dot</title>
+    </head>
+    <body>
+        <div id="dot">
+            <p ></p>
+        </div>
+    </body>
+
+</html>
+
+<style>
+
+    #dot{
+        height: 100px;
+        width: 100px;
+        color: black;
+        background-color: black;
+        border-radius: 100px;
+        position: absolute;
+        
+    }
+</style>
+
+<script>
+ function coordinate(event) {
+        let x=event.clientX;
+        let y=event.clientY;
+        
+        dot.style.left = x - dot.clientWidth / 2;
+        dot.style.top = y - dot.clientHeight / 2;
+        
+        
+    }
+    let dot = document.getElementById('dot');
+    document.onmousemove = coordinate;
+    console.log(dot);
+
+
+</script>
